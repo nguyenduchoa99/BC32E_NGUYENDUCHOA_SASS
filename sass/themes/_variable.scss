@@ -1,0 +1,59 @@
+
+$bg-c1-violet: #b61984;
+$bg-c2-violet: #aa017e;
+$bg-c1-light: #fff;
+$bg-c1-grey: #dcd1f3;
+
+$text-mxs: 0.6rem;
+$text-mss: 0.7rem;
+$text-ss: 0.75rem;
+$text-xx: 0.8rem;
+$text-xs: 0.9rem;
+$text-xss: 14px;
+$text-base: 16px;
+$text-xxs: 1rem;
+$text-xl: 1.1rem;
+$text-2xl: 1.55rem;
+$text-25xl: 30px;
+$text-3xl: 2.5rem;
+$text-3xlm: 3.15rem;
+$text-4xl: 3.8rem;
+
+
+
+
+
+$text-c1-dark: #000;
+$text-c2-dark: #181818;
+$text-c1-light: #fff;
+$text-c1-violet: #b61984;
+$text-c2-violet: #aa017e;
+
+
+
+
+$text-light: 300;
+$text-regular: 400;
+$text-semibold: 600;
+$text-bold: 700;
+
+
+@mixin text($fs: $text-base, $fw: $text-regular, $c: $text-c1-dark) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button($fs, $fw, $fc, $bg, $pd, $bd, $br, $bg-hover, $c-hover) {
+    @include text($fs, $fw, $fc);
+    background: $bg;
+    padding: $pd;
+    border: $bd;
+    border-radius: $br;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $bg-hover;
+        color: $c-hover;
+    }
+}
